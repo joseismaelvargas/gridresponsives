@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(255, 255, 255);
+    font-family: sans-serif;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    /* con este margin coonsentramos en conteido en el medio de la pagina */
+    margin: 20px auto ; 
+    /* con display grid + grid-gap ->ponemos margenes dentro del contenido */
+    display: grid;
+    grid-gap: 20px;
+    /* para agregar  columna horizontal en el contenedor */
+    grid-template-columns: repeat(3,1fr);
+    /* para agregar fila vertical en el contenedor  */
+     grid-template-rows: repeat(4,auto);
+    
+    }
+  
+   
+    
+    .footer{
+        background-color:rgb(197, 185, 185);
+      border-radius:4px;
+        padding: 20px;
+     
+    }
+    .HEADER{
+        background-color:rgb(14, 5, 95);
+        color: white;
+      border-radius:4px;
+        padding: 20px;
+        /* para pooner el grid 1 al grid 4 */
+       grid-column-start:1;
+       grid-column-end: 4;
+      
+    }
+    .contenido{
+        background-color:rgb(189, 209, 7);
+      border-radius:4px;
+      color: rgb(0, 0, 0);
+        padding: 20px;
+        /* el contenido abarcara parte de la segunda coolumna*/
+        grid-column: span 2;
+        height: 1000px;
+        width: 90%;
+        margin: 20px auto;
+    }
+    .sidebar{
+        background-color:rgb(230, 82, 14);
+      border-radius:4px;
+      color: rgb(12, 11, 11);
+        padding: 20px;
+        /* o poodemos poner de a misma forma pero solo agregando un / */
+        grid-column:3/4;
+        /* alineamos el textoo en forma vertical-cental :sidebar */
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* lo mismo para las filas agrgamos un /*/
+        grid-row: 2/4;
+        min-height: 100px;
+       
+    }
+    .widger1{
+      
+        background-color: rgb(124, 114, 99);
+        color: white;
+        border-radius: 4px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        width: 40;
+        height: 100px;
+
+        
+    }
+    .widger2{
+        background-color: rgb(124, 114, 99);
+        color: white;
+        border-radius: 4px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        height: 100px;
+       }
+    .footer{
+        background-color: rgb(51, 14, 136);
+        color: white;
+        grid-column: 4/1;
+      
+      
+    }
+    @media screen and (max-width:768px){
+       body{
+            background-color: rgb(5, 7, 7);
+        }
+        .contenido{
+            grid-column: 1/-1;
+        }
+        .sidebar{
+            grid-column: 1/-1;
+        }
+        .widger1{
+            grid-column: span 2;
+            min-height: 100px;
+
+        }
+        .widger2{
+            grid-column: span 2;
+            
+        }
+
+    }
+    
+       
+        
+    
